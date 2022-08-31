@@ -34,7 +34,6 @@ npm run testManual
 ## 🛠️ Construído com
 
 * [react]
-* [react-router-dom]
 * [styled-components]
 
 ## ✒️ Autores
