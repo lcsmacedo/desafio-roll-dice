@@ -5,7 +5,7 @@ implementação de uma site para gerar resultados aleatórios do lançamento de 
 
 ## 📦 link do APP
 
-https://eight-addition.surge.sh/
+https://abounding-body.surge.sh/
 
 ## 🚀 Começando
 

@@ -48,7 +48,21 @@ const Div = styled.div`
         rgba(0, 0, 0, 0.23) 0px 6px 6px;
       cursor: pointer;
     }
+
   }
+    
+  @media(max-width: 800px) {
+    
+    height: 98vh;
+
+    button{
+      width: 20%;
+    }
+
+    img{
+      margin: 50% 0 0 0;
+    }
+ }
 `;
 
 function App() {
