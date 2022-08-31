@@ -7,6 +7,44 @@ import Face4 from "./img/face-4.png";
 import Face5 from "./img/face-5.png";
 import Face6 from "./img/face-6.png";
 
+
+const Button = styled.button `
+  margin: 5% 0 0 0;
+  background-color: #008dff;
+  width: 5%;
+  height: 5%;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+  &:hover {
+    background-color: #0068ff;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+      rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    cursor: pointer;
+  }
+  @media(max-width: 800px) {
+
+      width: 20%;
+  }
+
+`
+
+const Img = styled.img`
+  border-radius: 10%;
+  margin: 20% 0 0 0;
+  width: 50%;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
+    rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
+@media(max-width: 800px) {
+  
+    margin: 50% 0 0 0;
+}
+`
+
 const Div = styled.div`
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
@@ -31,33 +69,12 @@ const Div = styled.div`
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
       rgba(0, 0, 0, 0.23) 0px 6px 6px;
   }
-  button {
-    margin: 5% 0 0 0;
-    background-color: #008dff;
-    width: 5%;
-    height: 5%;
-    border-radius: 10px;
-    border: none;
-    color: white;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-      rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    &:hover {
-      background-color: #0068ff;
-      color: white;
-      box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px,
-        rgba(0, 0, 0, 0.23) 0px 6px 6px;
-      cursor: pointer;
-    }
 
-  }
     
   @media(max-width: 800px) {
     
     height: 98vh;
 
-    button{
-      width: 20%;
-    }
 
     img{
       margin: 50% 0 0 0;
@@ -74,24 +91,38 @@ function App() {
     .sort(() => Math.random() - 0.5)
     .map((face) => face);
 
-  const renderFace = (param) => {
-    switch (param) {
-      case 1:
-        return <img src={Face1} />;
-      case 2:
-        return <img src={Face2} />;
-      case 3:
-        return <img src={Face3} />;
-      case 4:
-        return <img src={Face4} />;
-      case 5:
-        return <img src={Face5} />;
-      case 6:
-        return <img src={Face6} />;
-      default:
-        return <img src={Face1} />;
-    }
-  };
+    const renderFace = (param) => {
+      switch (param) {
+        case 1:
+          return <Img 
+          alt="dice"
+          src={Face1} />;
+        case 2:
+          return <Img 
+          alt="dice"
+          src={Face2} />;
+        case 3:
+          return <Img 
+          alt="dice"
+          src={Face3} />;
+        case 4:
+          return <Img 
+          alt="dice"
+          src={Face4} />;
+        case 5:
+          return <Img 
+          alt="dice"
+          src={Face5} />;
+        case 6:
+          return <Img 
+          alt="dice"
+          src={Face6} />;
+        default:
+          return <Img 
+          alt="dice"
+          src={Face1} />;
+      }
+    };
 
   return (
     <Div className="App">
@@ -99,13 +130,13 @@ function App() {
 
       <div>{renderFace(face[0])}</div>
 
-      <button
+      <Button
         onClick={() => {
           setFace(faceDice);
         }}
       >
         Lançar
-      </button>
+      </Button>
     </Div>
   );
 }
