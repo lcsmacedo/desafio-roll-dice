@@ -25,7 +25,7 @@ para rodar a API na porta 3000 digite:
 npm run start
 ```
 
-para se o dado está viciado digite:
+para verificar se o dado está viciado digite:
 
 ```
 npm run testManual
